@@ -1,0 +1,644 @@
+body { 
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+/* Liens */
+a {
+    color: #ffcc00;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #ff6600;
+    text-decoration: underline;
+}
+
+/* HEADER */
+header {
+    background-color: #07090a; /* Bandeau du haut */
+    color: #ffffff; /* Texte en blanc pour contraste */
+    padding: 20px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Espace entre l’image et le texte */
+    flex-wrap: wrap; /* Permet le retour à la ligne si nécessaire */
+}
+
+/* Conteneur du texte */
+.text-container {
+    display: flex;
+    flex-direction: column;
+    text-align: left; /* Alignement du texte */
+}
+
+/* Titre principal */
+h1 { 
+    text-shadow: 4px 4px 5px rgb(26, 24, 25);
+    margin: 0;
+    font-size: 50px; /* Augmenté de 24px à 36px */
+    color: #ffffff;
+}
+
+/* Sous-titre */
+.subtitle {
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 5px;
+}
+
+/* Image du header */
+header img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    .text-container {
+        text-align: center;
+    }
+    header img {
+        width: 100px;
+        height: 100px;
+    }
+    h1 {
+        font-size: 20px;
+    }
+    .subtitle {
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 480px) {
+    header {
+        padding: 10px;
+    }
+    header img {
+        width: 80px;
+        height: 80px;
+    }
+    h1 {
+        font-size: 18px;
+    }
+    .subtitle {
+        font-size: 14px;
+    }
+}
+
+/* NAVIGATION */
+nav ul {
+    display: flex; /* Garde l'affichage en ligne */
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne si nécessaire */
+    justify-content: center; /* Centre les éléments */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+nav li {
+    margin: 10px; /* Ajoute un peu d'espace autour */
+    white-space: nowrap; /* Empêche les textes de se couper */
+}
+nav a {
+    text-decoration: none;
+    color: #073a5b;
+    font-weight: 600;
+    padding: 10px 15px;
+    transition: all 0.3s ease-in-out;
+    display: inline-block; /* Permet un meilleur comportement en responsif */
+    text-align: center;
+}
+@media screen and (max-width: 600px) {
+    nav ul {
+        flex-direction: column; /* Empile les boutons en colonne */
+        align-items: center; /* Centre les éléments */
+    }
+    nav li {
+        width: 100%; /* Permet aux boutons de prendre toute la largeur */
+        text-align: center;
+    }
+    nav a {
+        display: block;
+        width: 100%;
+        padding: 15px;
+    }
+}
+
+/* CONTENU PRINCIPAL */
+.page-content {
+    margin: 4%;
+}
+h2 {
+    /* Bordure */
+    border: 2px solid black; /* Définit un bord de 2px de couleur noire */
+    border-radius: 10px; /* Coins arrondis */
+    
+    /* Espacement */
+    padding: 10px; /* Ajoute de l'espace autour du texte */
+    margin: 0 0 15px 0; /* Espacement en bas */
+    
+    /* Affichage et dimensions */
+    display: inline-block; /* Ajuste l'élément à la largeur du texte */
+    max-width: 100%; /* Empêche l'élément de dépasser son conteneur */
+    overflow-wrap: break-word; /* Permet de casser les mots trop longs */
+    
+    /* Style du texte */
+    font-size: 24px;
+    font-weight: bold;
+    color: #070606;
+    /*text-shadow: 4px 4px 5px rgb(26, 24, 25);
+    
+    /* Couleurs et ombres */
+    background-color: transparent;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/*SECTION*/  
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre toutes les sections */
+    width: 100%;
+}
+section {
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1000px;
+    line-height: 1.6;
+    font-size: 18px;
+    text-align: left;
+    width: 100%;
+}
+
+/* PROJETS ou trajectoire professionnelle */
+.project {
+    display: flex;
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne suivante si l'espace est insuffisant */
+    justify-content: center; /* Centrer horizontalement */
+    align-items: center; /* Centrer verticalement */
+    gap: 6px; /* Ajoute un espace régulier entre les blocs */
+}
+.project div {
+    background-color: #ffffff; /* Fond blanc pour lisibilité */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 15px;
+    padding: 50px;
+    width: 30%; /* Pour trois éléments sur une ligne en grand format */
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+.project div:hover {
+    transform: scale(1.05); /* Effet zoom léger */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Media query pour les tablettes (jusqu'à 1024px) */
+@media (max-width: 1024px) {
+    .project div {
+        width: 45%; /* Deux éléments par ligne sur tablette */
+    }
+}
+/* Media query pour les petits écrans (jusqu'à 768px) */
+@media (max-width: 768px) {
+    .project div {
+        width: 90%; /* Un élément par ligne sur mobile */
+    }
+}
+
+/*Compétences*/
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+}
+/* Style général des cartes */
+.rotating-card {
+    width: 300px; /* Taille de base */
+    max-width: 100%; /* Empêche le dépassement */
+    perspective: 1000px; /* Effet 3D */
+}
+/* Intérieur des cartes */
+.rotating-card-inner {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+/* Images à l'intérieur des cartes */
+.rotating-card img {
+    width: 100%; /* Image responsive */
+    max-height: 140px; /* Garde une hauteur raisonnable */
+    object-fit: cover; /* Coupe l'image proprement si nécessaire */
+    border-radius: 10px; /* Coins arrondis */
+}
+/* 📱 Responsive pour les petits écrans */
+@media (max-width: 600px) {
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .rotating-card {
+        width: 90%; /* Ajuste la largeur pour mobile */
+    }
+    .rotating-card img {
+        max-height: 120px; /* Ajuste la hauteur pour éviter les débordements */
+    }
+}
+/* 📱 Tablette (601px - 1024px) : 2 cartes par ligne */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .card-container {
+        justify-content: space-around;
+    }
+    .rotating-card {
+        width: 45%; /* 2 cartes côte à côte */
+    }
+}
+/* 🖥️ Grand écran (≥ 1025px) : 3 cartes par ligne */
+@media (min-width: 1025px) {
+    .rotating-card {
+        width: 30%; /* Ajuste à 3 par ligne */
+    }
+}
+
+/* competences */
+.competences-container {
+    background: transparent;
+    border-radius: 50px;
+    padding: 30px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    max-width: 1000px;
+    margin: auto;
+    transition: all 0.3sease -in-out;
+}
+.competences-section {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/*BTS SIO*/
+.bts {
+    display: flex;
+    /*flex-wrap: wrap;*/
+    justify-content: space-around;
+    justify-content: center; /* Centrer horizontalement */
+    align-items: center; /* Centrer verticalement */
+    align-items: stretch; /* Aligne les blocs en hauteur */
+    gap: 6px; /* Ajoute un espace régulier entre les blocs */
+}
+.bts div {
+    background-color: #ffffff; /* Fond blanc pour lisibilité */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 100px;
+    margin: 50px;
+    padding: 100px;
+    width: 500px; /* Augmente la largeur à 500px */
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+.bts div:hover {
+    transform: scale(1.05); /* Effet zoom léger */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* FOOTER */
+footer {
+    background-color: #222;
+    color: rgb(234, 236, 244);
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+}
+
+/* Animation d'apparition en fondu */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Appliquer l'animation aux sections */
+section {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/*FORMULAIRE pour le mails*/
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #0056b3;
+}
+@media (max-width: 768px) {
+    header, nav, section, footer {
+        padding: 20px;
+    }
+    h2 {
+        font-size: 20px;
+        max-width: 100%;
+    }
+    .project div, .bts div {
+        width: 90%;
+        padding: 30px;
+    }
+    form {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 24px;
+    }
+    nav a {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+    h2 {
+        font-size: 18px;
+    }
+    .project div, .bts div {
+        width: 100%;
+        padding: 20px;
+    }
+    .image-container img {
+        max-height: 150px;
+    }
+}
+
+/*p {
+    animation-duration: 3s;
+    animation-name: slidein;
+  }
+  
+  @keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }*/
+
+  /*animation de fond
+  body {
+    background: -moz-linear-gradient(45deg, #f2f5f4 0%, #e6eaeb 29%, #fbf9fc 66%, #f0ebea 100%);
+    background: -webkit-linear-gradient(45deg, #f6faf9 0%,#ebeff0 29%,#edeaee 66%,#e7e3e2 100%);
+    background: linear-gradient(45deg, #f4f5f5 0%,#f6f9fa 29%,#f4eff5 66%,#f8f7f6 100%);
+    background-size: 800% 800%;
+    -webkit-animation: Gradient 15s ease infinite;
+    -moz-animation: Gradient 15s ease infinite;
+    animation: Gradient 15s ease infinite;
+    min-height: 100vh; /* Modification ici */
+    /*display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-evenly; 
+    position: relative; /* Enlève overflow: hidden */
+/*}
+body::before, 
+body::after {
+    content: "";
+    width: 70vmax;
+    height: 70vmax;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.07);
+    left: -20vmin;
+    top: -20vmin;
+    animation: morph 15s linear infinite alternate, spin 20s linear infinite;
+    z-index: 1;
+    will-change: border-radius, transform;
+    transform-origin: 55% 55%;
+    pointer-events: none; 
+}
+body::after {
+    width: 70vmin;
+    height: 70vmin;
+    left: auto;
+    right: -10vmin;
+    top: auto;
+    bottom: 0;
+    animation: morph 10s linear infinite alternate, spin 26s linear infinite reverse;
+    transform-origin: 20% 20%; 
+}
+@-webkit-keyframes Gradient {
+    0% {background-position: 0 50%}
+    50% {background-position: 100% 50%}
+    100% {background-position: 0 50%}
+}
+@-moz-keyframes Gradient {
+    0% {background-position: 0 50%}
+    50% {background-position: 100% 50%}
+    100% {background-position: 0 50%}
+}
+@keyframes Gradient {
+    0% {background-position: 0 50%}
+    50% {background-position: 100% 50%}
+    100% {background-position: 0 50%}
+}
+@keyframes morph {
+  0% {border-radius: 40% 60% 60% 40% / 70% 30% 70% 30%;}
+  100% {border-radius: 40% 60%; } 
+}
+@keyframes spin {
+  to {transform: rotate(1turn);} 
+}*/
+
+/*bts sio, page qui se retourne*/
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+.flip-card:hover .flip-card-inner,
+.flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg); /* Rotation au hover ou au clic */
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px; /* Réduction du padding pour éviter le chevauchement */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flip-card-front {
+    background: #706767;
+}
+
+.flip-card-back {
+    background: #073a5b;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.card-container {
+    display: flex; /* Aligner les cartes en ligne */
+    justify-content: center; /* Centrer les cartes horizontalement */
+    align-items: center; /* Aligner verticalement si besoin */
+    gap: 100px; /* Espacement entre les cartes */
+    flex-wrap: nowrap; /* Empêche le retour à la ligne */
+}
+
+.flip-card {
+    width: 700px; /* Taille fixe pour chaque carte */
+    height: 750px; /* Hauteur fixe */
+    background-color: transparent;
+    perspective: 1000px;
+}
+
+
+/*backdoor*/
+.rotating-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.rotating-card.rotated .rotating-card-inner {
+    transform: rotateY(180deg); /* Rotation au clic */
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-front {
+    background: #706767;
+}
+
+.card-back {
+    background: #073a5b;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px; /* Espacement entre les cartes */
+}
+
+.rotating-card {
+    width: 550px; /* Largeur fixe pour chaque carte */
+    height: 450px; /* Hauteur fixe */
+    background-color: transparent;
+    perspective: 1000px;
+    box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur et la hauteur */
+}
+
+.cv-container {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    margin: auto;
+    text-align: center;
+}
+.cv-section {
+    text-align: left;
+    margin-top: 20px;
+}
+
+/*
+<h2> Vous pourrez me voir ici, à la localisation présenter ci-dessous</h2>
+        <div class="competences-container competences-section">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2636.307198174193!2d1.9160805!3d47.8987021!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e4e4c93db65bd7%3A0x80790aeab3b36cc3!2sLyc%C3%A9e%20Priv%C3%A9%20Saint%20Paul%20Bourdon%20Blanc!5e0!3m2!1sfr!2sfr!4v1694031419300!5m2!1sfr!2sfr&amp;markers=47.8987021,1.9160805" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <h4>Envoyez-moi un message directement depuis ici !</h4>
+            <form action="https://mail.google.com/mail/u/0/?hl=fr#inbox" method="POST">
+                <label for="name">Nom:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                <button type="submit">Envoyer</button>
+            </form>
+        </div>
+    </section>
+    <br>
+    <br>
+*/
